@@ -1,6 +1,7 @@
 # praktikumAlstrukdat
 
 nilai pasca praktikum
+
 prak 1 : 100%
 prak 2 : 100%
 prak 3 : 100%
