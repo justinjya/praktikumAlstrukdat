@@ -40,9 +40,7 @@ int eval(char *input, int length)
     infotype angka2;
     infotype eval;
     int hasil;
-    // int i;
     CreateEmpty(&S);
-    // while (i < length)
     while (*input != '\0')
     {
         if (!isOperator(*input))
@@ -57,7 +55,6 @@ int eval(char *input, int length)
             Push(&S, hasil);
         }
         input++;
-        // i++;
     }
     Pop(&S, &eval);
     return eval;
