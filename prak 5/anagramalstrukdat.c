@@ -75,15 +75,15 @@ boolean isAnagram(Word string1, Word string2)
 
 void anagramalstrukdat(int *frek)
 {
-    frek = 0;
     Word alstrukdat;
+    *frek = 0;
     alstrukdat = toKata("alstrukdat");
     STARTWORD();
-    while (isEndWord == 0)
+    while (!isEndWord())
     {
         if (isAnagram(alstrukdat, currentWord))
         {
-            frek++;
+            (*frek)++;
         }
         ADVWORD();
     }
