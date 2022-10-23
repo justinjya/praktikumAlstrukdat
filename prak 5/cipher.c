@@ -8,7 +8,7 @@ int main()
     int x;
     STARTWORD();
     x = currentWord.Length;
-    while (isEndWord == 0)
+    while (!isEndWord())
     {
         for (int i = 0; i < currentWord.Length; i++)
         {
@@ -21,7 +21,10 @@ int main()
                 printf("%c", currentWord.TabWord[i] + x);
             }
         }
-        printf(" ");
+        if (currentChar != MARK)
+        {
+            printf(" ");
+        }
         ADVWORD();
     }
     printf(".\n");
