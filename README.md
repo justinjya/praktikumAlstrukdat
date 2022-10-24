@@ -14,4 +14,4 @@ prak 5 : 98% (cipher nilainya 88)
 
 prak 6 : 100%
 
-prak 7 : 
+prak 7 : 98% (pengurangan nilainya 90)
