@@ -8,25 +8,20 @@ Stack validParantheses(char *input, int length)
     infotype val;
     while (*input != '\0')
     {
-        if ((*input == '(') || (*input == '[') || (*input == '{'))
+        if ((*input == '(') && (*(input + 1) == ')'))
         {
             Push(&S, *(input));
-            if ((*input == '(') && (*(input + 1) == ')'))
-            {
-                Push(&S, *(input + 1));
-            }
-            else if ((*input == '[') && (*(input + 1) == ']'))
-            {
-                Push(&S, *(input + 1));
-            }
-            else if ((*input == '{') && (*(input + 1) == '}'))
-            {
-                Push(&S, *(input + 1));
-            }
-            else
-            {
-                Pop(&S, &val);
-            }
+            Push(&S, *(input + 1));
+        }
+        else if ((*input == '[') && (*(input + 1) == ']'))
+        {
+            Push(&S, *(input));
+            Push(&S, *(input + 1));
+        }
+        else if ((*input == '{') && (*(input + 1) == '}'))
+        {
+            Push(&S, *(input));
+            Push(&S, *(input + 1));
         }
         input++;
     }
