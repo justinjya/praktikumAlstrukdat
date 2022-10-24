@@ -15,11 +15,11 @@ Stack validParantheses(char *input, int length)
             {
                 Push(&S, *(input + 1));
             }
-            if ((*input == '[') && (*(input + 1) == ']'))
+            else if ((*input == '[') && (*(input + 1) == ']'))
             {
                 Push(&S, *(input + 1));
             }
-            if ((*input == '{') && (*(input + 1) == '}'))
+            else if ((*input == '{') && (*(input + 1) == '}'))
             {
                 Push(&S, *(input + 1));
             }
