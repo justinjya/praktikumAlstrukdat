@@ -10,7 +10,7 @@ prak 3 : 100%
 
 prak 4 : 100%
 
-prak 5 : 98% (cipher.c nilainya 88)
+prak 5 : 100%
 
 prak 6 : 100%
 
