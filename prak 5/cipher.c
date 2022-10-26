@@ -3,6 +3,7 @@
 #include "mesinkarakterv2.h"
 #include "mesinkata.h"
 
+
 int main()
 {
     int x;
@@ -12,14 +13,7 @@ int main()
     {
         for (int i = 0; i < currentWord.Length; i++)
         {
-            if (currentWord.TabWord[i] + x > 90)
-            {
-                printf("%c", 65 + ((currentWord.TabWord[i] + x) % 91));
-            }
-            else
-            {
-                printf("%c", currentWord.TabWord[i] + x);
-            }
+            printf("%c", 65 + (((currentWord.TabWord[i] - 65) + x) % 26));
         }
         if (currentChar != MARK)
         {
