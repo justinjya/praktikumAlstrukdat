@@ -17,8 +17,8 @@ int main()
                 jumlah = jumlah + 1;
             }
         }
-    printf("%d", jumlah);
-    jumlah = 0;
+        printf("%d", jumlah);
+        jumlah = 0;
     }
     printf("\n");
     return 0;
