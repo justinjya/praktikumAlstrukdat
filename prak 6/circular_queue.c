@@ -16,24 +16,25 @@ int Length(Queue Q)
 {
     if (IsEmpty(Q))
     {
-        return 0;    }
+        return 0;
+    }
     else
     {
         int length = 0;
         if (Q.HEAD <= Q.TAIL)
         {
-            for (int i = Q.HEAD; i <= Q.TAIL; i++)
+            for (IdxType i = Q.HEAD; i <= Q.TAIL; i++)
             {
                 length++;
             }
         }
         else
         {
-            for (int i = Q.HEAD; i < Q.MaxEl; i++)
+            for (IdxType i = Q.HEAD; i < Q.MaxEl; i++)
             {
                 length++;
             }
-            for (int i = 0; i <= Q.TAIL; i++)
+            for (IdxType i = 0; i <= Q.TAIL; i++)
             {
                 length++;
             }
