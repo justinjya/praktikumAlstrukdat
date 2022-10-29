@@ -14,6 +14,7 @@ ArrayDin MakeArrayDin()
 void DeallocateArrayDin(ArrayDin *array)
 {
     free(array->A);
+    array->Neff = 0;
 }
 
 boolean IsEmpty(ArrayDin array)
