@@ -34,7 +34,7 @@ ElType GetElmt(TabInt T, IdxType i)
 
 void SetTab(TabInt Tin, TabInt *Tout)
 {
-    int i;
+    IdxType i;
     for (i = IdxMin; i < IdxMax; i++)
     {
         Tout->TI[i] = Tin.TI[i];
@@ -96,7 +96,7 @@ TabInt PlusTab(TabInt T1, TabInt T2)
 {
     TabInt hasil;
     MakeEmpty(&hasil);
-    int i;
+    IdxType i;
     for (i = IdxMin; i <= T1.Neff; i++)
     {
         hasil.TI[i] = T1.TI[i] + T2.TI[i]; 
@@ -109,7 +109,7 @@ TabInt MinusTab(TabInt T1, TabInt T2)
 {
     TabInt hasil;
     MakeEmpty(&hasil);
-    int i;
+    IdxType i;
     for (i = IdxMin; i <= T1.Neff; i++)
     {
         hasil.TI[i] = T1.TI[i] - T2.TI[i];
@@ -120,7 +120,8 @@ TabInt MinusTab(TabInt T1, TabInt T2)
 
 ElType ValMax(TabInt T)
 {
-    ElType i, max;
+    IdxType i;
+    ElType max;
     max = T.TI[IdxMin];
     for (i = IdxMin; i <= T.Neff; i++)
     {
@@ -134,7 +135,8 @@ ElType ValMax(TabInt T)
 
 ElType ValMin(TabInt T)
 {
-    ElType i, min;
+    IdxType i;
+    ElType min;
     min = T.TI[IdxMin];
     for (i = IdxMin; i <= T.Neff; i++)
     {
