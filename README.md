@@ -16,3 +16,5 @@ prak 5 : 100%
 prak 6 : 100%
 
 prak 7 : 100%
+
+prak 8 : 
