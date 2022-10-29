@@ -71,12 +71,20 @@ void DeleteAt(ArrayDin *array, IdxType i)
         array->A[temp] = array->A[temp + 1];
         temp++;
     }
-    array->Neff--;
+
+    if (array->Neff > 1)
+    {
+        array->Neff--;
+    }
+    else
+    {
+        array->Neff = 0;
+    }
 }
 
 void DeleteLast(ArrayDin *array)
 {
-    array->Neff--;
+    DeleteAt(array, array->Neff - 1);
 }
 
 void DeleteFirst(ArrayDin *array)
@@ -92,21 +100,21 @@ void PrintArrayDin(ArrayDin array)
     }
     else
     {
-        int i;
+        IdxType i;
         printf("[");
         for (i = 0; i < array.Neff - 1; i++)
         {
-            printf("%d, ", array.A[i]);
+            printf("%s, ", array.A[i]);
         }
-        printf("%d]\n", array.A[array.Neff - 1]);
+        printf("%s]\n", array.A[array.Neff - 1]);
     }
 }
 
 void ReverseArrayDin(ArrayDin *array)
 {
     IdxType i = array->Neff - 1;
-    int count = 0;
-    int temp;
+    IdxType count = 0;
+    ElType temp;
     while (count < i)
     {
         temp = array->A[count];
