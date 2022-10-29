@@ -5,7 +5,7 @@
 ArrayDin MakeArrayDin()
 {
     ArrayDin Arr;
-    Arr.A = (ElType *)malloc(InitialSize * sizeof(ElType));
+    Arr.A = (ElType *) malloc (InitialSize * sizeof(ElType));
     Arr.Capacity = InitialSize;
     Arr.Neff = 0;
     return Arr;
@@ -41,9 +41,9 @@ void InsertAt(ArrayDin *array, ElType el, IdxType i)
     if (array->Neff == array->Capacity)
     {
         array->Capacity *= 2;
-        array->A = (ElType *)realloc(array->A, array->Capacity * sizeof(ElType));
+        array->A = (ElType *) realloc (array->A, array->Capacity * sizeof(ElType));
     }
-    int temp = array->Neff;
+    IdxType temp = array->Neff;
     while (temp > i)
     {
         array->A[temp] = array->A[temp - 1];
@@ -65,7 +65,7 @@ void InsertFirst(ArrayDin *array, ElType el)
 
 void DeleteAt(ArrayDin *array, IdxType i)
 {
-    int temp = i;
+    IdxType temp = i;
     while (temp < array->Neff - 1)
     {
         array->A[temp] = array->A[temp + 1];
@@ -104,7 +104,7 @@ void PrintArrayDin(ArrayDin array)
 
 void ReverseArrayDin(ArrayDin *array)
 {
-    int i = array->Neff - 1;
+    IdxType i = array->Neff - 1;
     int count = 0;
     int temp;
     while (count < i)
@@ -121,7 +121,7 @@ ArrayDin CopyArrayDin(ArrayDin array)
 {
     ArrayDin ArrCopy;
     ArrCopy = MakeArrayDin();
-    int i;
+    IdxType i;
     for (i = 0; i < array.Neff; i++)
     {
         InsertLast(&ArrCopy, array.A[i]);
@@ -131,7 +131,7 @@ ArrayDin CopyArrayDin(ArrayDin array)
 
 IdxType SearchArrayDin(ArrayDin array, ElType el)
 {
-    int i;
+    IdxType i;
     for (i = 0; i < array.Neff; i++)
     {
         if (array.A[i] == el)
