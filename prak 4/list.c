@@ -4,7 +4,7 @@
 List MakeList()
 {
     List L;
-    int i;
+    IdxType i;
     for (i = 0; i < MaxEl; i++)
     {
         L.A[i] = Mark;
@@ -60,7 +60,7 @@ boolean IsIdxEff(List L, IdxType i)
 
 boolean Search(List L, ElType X)
 {
-    int i;
+    IdxType i;
     boolean found = false;
     for (i = FirstIdx(L); i <= LastIdx(L); i++)
     {
@@ -74,7 +74,7 @@ boolean Search(List L, ElType X)
 
 void InsertFirst(List *L, ElType X)
 {
-    int i;
+    IdxType i;
     for (i = LastIdx(*L); i >= 0; i--)
     {
         L->A[i] = L->A[i-1];
@@ -84,7 +84,7 @@ void InsertFirst(List *L, ElType X)
 
 void InsertAt(List *L, ElType X, IdxType i)
 {
-    int j;
+    IdxType j;
     for (j = LastIdx(*L) + 1; j >= i; j--)
     {
         L->A[j] = L->A[j-1];
@@ -99,7 +99,7 @@ void InsertLast(List *L, ElType X)
 
 void DeleteFirst(List *L)
 {
-    int i;
+    IdxType i;
     for (i = FirstIdx(*L); i <= LastIdx(*L); i++)
     {
         L->A[i] = L->A[i+1];
@@ -108,7 +108,7 @@ void DeleteFirst(List *L)
 
 void DeleteAt(List *L, IdxType i)
 {
-    int j;
+    IdxType j;
     for (j = i; j <= LastIdx(*L); j++)
     {
         L->A[j] = L->A[j+1];
@@ -124,8 +124,8 @@ List Concat(List L1, List L2)
 {
     List Concat;
     Concat = MakeList();
-    int i = FirstIdx(L1);
-    int j = FirstIdx(L2);
+    IdxType i = FirstIdx(L1);
+    IdxType j = FirstIdx(L2);
     while (i < (Length(L1) + Length(L2)))
     {
         Concat.A[i] = L1.A[i];
