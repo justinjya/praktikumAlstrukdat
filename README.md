@@ -1,7 +1,7 @@
 # praktikumAlstrukdat
 
 nilai pasca praktikum  
-*( bukan brarti pas praktikum dapet segitu nilai nya )*  
+***( bukan brarti pas praktikum dapet segitu nilai nya )***  
 
 prak 1 : 100%  
 prak 2 : 100%  
