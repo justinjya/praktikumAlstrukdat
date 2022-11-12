@@ -31,17 +31,24 @@ void Dealokasi(address *P)
 
 address Search(List L, infotype X)
 {
-    address P;
-    P = First(L);
-    while (P != Nil)
+    if (IsEmpty(L))
     {
-        if (Info(P) == X)
-        {
-            return P;
-        }
-        P = Next(P);
+        return Nil;
     }
-    return P;
+    else
+    {
+        address P;
+        P = First(L);
+        while (P != Nil)
+        {
+            if (Info(P) == X)
+            {
+                return P;
+            }
+            P = Next(P);
+        }
+        return Nil;
+    }
 }
 
 void InsVFirst(List *L, infotype X)
@@ -126,22 +133,25 @@ void DelFirst(List *L, address *P)
 
 void DelP(List *L, infotype X)
 {
-    address addressX, P, temp;
-    addressX = Search(*L, X);
-    if (addressX != Nil)
+    if (!IsEmpty(*L))
     {
-        if (addressX != First(*L))
+        address addressX, P, temp;
+        addressX = Search(*L, X);
+        if (addressX != Nil)
         {
-            P = First(*L);
-            while (Next(P) != addressX)
+            if (addressX != First(*L))
             {
-                P = Next(P);
+                P = First(*L);
+                while (Next(P) != addressX)
+                {
+                    P = Next(P);
+                }
+                DelAfter(L, &temp, P);
             }
-            DelAfter(L, &temp, P);
-        }
-        else
-        {
-            DelFirst(L, &temp);
+            else
+            {
+                DelFirst(L, &temp);
+            }
         }
     }
 }
@@ -275,19 +285,22 @@ float Average(List L)
 
 void InversList(List *L)
 {
-    address P;
-    address Prec = Nil;
-    address Suc = Nil;
-    
-    P = First(*L);
-    while (P != Nil)
+    if (!IsEmpty(*L))
     {
-        Suc = Next(P);
-        Next(P) = Prec;
-        Prec = P;
-        P = Suc;
+        address P;
+        address Prec = Nil;
+        address Suc = Nil;
+        
+        P = First(*L);
+        while (P != Nil)
+        {
+            Suc = Next(P);
+            Next(P) = Prec;
+            Prec = P;
+            P = Suc;
+        }
+        First(*L) = Prec;
     }
-    First(*L) = Prec;
 }
 
 void Konkat1(List *L1, List *L2, List *L3)
