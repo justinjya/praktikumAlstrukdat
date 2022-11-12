@@ -10,6 +10,6 @@ prak 4 : 100%
 prak 5 : 100%  
 prak 6 : 100%  
 prak 7 : 100%  
-prak 8 : 100%
-prak 9 : 98.33% (nomor 1 pra prak nilai nya 90)
-prak 10 :
+prak 8 : 100%  
+prak 9 : 98.33% (nomor 1 pra prak nilai nya 90)  
+prak 10 :  
