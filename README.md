@@ -12,4 +12,4 @@ prak 6 : 100%
 prak 7 : 100%  
 prak 8 : 100%  
 prak 9 : 98.33% (nomor 1 nilai nya 90)  
-prak 10 :  
+prak 10 : (nomor 2 nilai nya 94)  
