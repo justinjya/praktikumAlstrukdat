@@ -30,7 +30,7 @@ int main () {
   scanf("%d", &r);
   if (IsEmpty(L))
   {
-    printf("List kosong\n");
+    printf("List Kosong\n");
   }
   else
   {
